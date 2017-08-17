@@ -1,0 +1,26 @@
+#calendar{
+    margin-top: 30px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+#calendar h1{
+    text-align: center;
+}
+#calendar table{
+    margin:20px auto 20px;
+    border-collapse:collapse;
+}
+#calendar th,td{
+    width: 40px;
+    height: 40px;
+}
+#calendar td{
+    font-size: 20px;
+    text-align:center;
+}
+#calendar td:hover{
+    background: #ddd;
+}
+#calendar .fa:hover{
+    color: #999;
+}

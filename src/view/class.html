@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('html-loader!./layout/head-common.html')%>
+    <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+    <%= require('html-loader!./layout/back-top.html')%>
+    <%= require('html-loader!./layout/header.html')%>
+    <div class="w">
+        <main>
+            <h1>garychen的个人网站</h1>
+            <p>分类</p>
+        </main>
+        <%= require('html-loader!./layout/footer.html')%>        
+    </div>
+</body>
+</html>
