@@ -21,7 +21,9 @@ header nav span{
     margin-right: 10px;
     display: inline-block;
     padding: 0 20px;
+    cursor: pointer;
 }
 header nav span:hover{
-    background: #36f;
+    background: #fff;
+    color:#39f;
 }
