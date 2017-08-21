@@ -1,7 +1,19 @@
 .video-con{
     overflow: hidden;
 }
-.video-item{
+.video-con .item-1{
+    background: url('../../../image/video/video-1.jpg');
+}
+.video-con .item-2{
+    background: url('../../../image/video/video-2.jpg');
+}
+.video-con .item-3{
+    background: url('../../../image/video/video-3.jpg');
+}
+.video-con .item-4{
+    background: url('../../../image/video/video-4.jpg');
+}
+.video-con .video-item{
     width: 200px;
     height: 200px;
     line-height: 200px; 
@@ -9,30 +21,83 @@
     float: left;
     margin-top: 45px;
     margin-left: 50px;
-    background: url('../../../image/video/video-1.jpg');
     background-size: 200px 200px;
     text-align: center;
     position: relative;
     opacity: 1;
     cursor: pointer;
 }
-.video-item:nth-child(2){
-    background: url('../../../image/video/video-2.jpg');
-}
-.video-item:nth-child(3){
-    background: url('../../../image/video/video-3.jpg');
-}
-.video-item:nth-child(4){
-    background: url('../../../image/video/video-4.jpg');
-}
-.video-play{
+.video-con .play{
+    /* border: 1px solid red; */
     background: url('../../../image/icon/play.png');
-    width: 70px;
-    height: 70px;
+    width: 2px;
+    height: 2px;
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-left: -1px;
+    margin-top: -1px;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+}
+/* .video-item动画 */
+@keyframes videoHover
+{
+    from {background-size: 200px 200px;}
+    to {background-size: 230px 230px;}
+}
+@-webkit-keyframes videoHover /* Safari 与 Chrome */
+{
+    from {background-size: 200px 200px;}
+    to {background-size: 230px 230px;}
+}
+@-moz-keyframes videoHover /* Firefox */
+{
+    from {background-size: 200px 200px;}
+    to {background-size: 230px 230px;}
+}
+@-o-keyframes videoHover /* Opera */
+{
+    from {background-size: 200px 200px;}
+    to {background-size: 230px 230px;}
+}
+.video-con .video-item:hover{
+    animation: videoHover .7s;
+    -webkit-animation: videoHover .7s; /* Safari 与 Chrome */
+    -moz-animation: videoHover .7s; /* Firefox */
+	-o-animation: videoHover .7s; /* Opera */
+    background-size: 230px 230px;
+    opacity: .8;
+}
+/* .play动画 */
+@keyframes playHover
+{
+    from {background-size: 0 0;width: 2px;height: 2px;margin-left: -1px;margin-top: -1px;}
+    to {background-size: 70px 70px;width: 70px;height: 70px;margin-left: -35px;margin-top: -35px;}
+}
+@-webkit-keyframes playHover /* Safari 与 Chrome */
+{
+    from {background-size: 0 0;width: 2px;height: 2px;margin-left: -1px;margin-top: -1px;}
+    to {background-size: 70px 70px;width: 70px;height: 70px;margin-left: -35px;margin-top: -35px;}
+}
+@-moz-keyframes playHover /* Firefox */
+{
+    from {background-size: 0 0;width: 2px;height: 2px;margin-left: -1px;margin-top: -1px;}
+    to {background-size: 70px 70px;width: 70px;height: 70px;margin-left: -35px;margin-top: -35px;}
+}
+@-o-keyframes playHover /* Opera */
+{
+    from {background-size: 0 0;width: 2px;height: 2px;margin-left: -1px;margin-top: -1px;}
+    to {background-size: 70px 70px;width: 70px;height: 70px;margin-left: -35px;margin-top: -35px;}
+}
+.video-con .video-item:hover .play{
+    animation: playHover .7s;
+    -webkit-animation: playHover .7s; /* Safari 与 Chrome */
+    -moz-animation: playHover .7s; /* Firefox */
+	-o-animation: playHover .7s; /* Opera */
+    background-size: 70px 70px;
+    width: 70px;
+    height: 70px;
     margin-left: -35px;
     margin-top: -35px;
-    display: none; 
 }

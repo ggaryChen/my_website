@@ -6,8 +6,8 @@ header .logo{
     background: #39f;
     color: #fff;
     padding-left: 250px; 
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 45px;
+    font-weight: 900;
 }
 header nav{
     background: #39f;
@@ -22,8 +22,34 @@ header nav span{
     display: inline-block;
     padding: 0 20px;
     cursor: pointer;
+    background: #39f;
+    color: #fff;
+}
+@keyframes navHover
+{
+    from {background: #39f;color: #fff;}
+    to {background: #fff;color: #39f;}
+}
+@-webkit-keyframes navHover /* Safari 与 Chrome */
+{
+    from {background: #39f;color: #fff;}
+    to {background: #fff;color: #39f;}
+}
+@-moz-keyframes navHover /* Firefox */
+{
+    from {background: #39f;color: #fff;}
+    to {background: #fff;color: #39f;}
+}
+@-o-keyframes navHover /* Opera */
+{
+    from {background: #39f;color: #fff;}
+    to {background: #fff;color: #39f;}
 }
 header nav span:hover{
+    animation: navHover 1s;
+    -webkit-animation: navHover 1s; /* Safari 与 Chrome */
+    -moz-animation: navHover 1s; /* Firefox */
+	-o-animation: navHover 1s; /* Opera */
     background: #fff;
     color:#39f;
 }

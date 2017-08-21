@@ -1,13 +1,28 @@
 require('./index.css')
-$('.video-item').mouseover(function(){
-    var $this = $(this);
-    $this.children('.video-play').show();
-    $this.css({'backgroundSize':'220px 220px','opacity':'0.8'});
-});
-$('.video-item').mouseout(function(e){
-    var $this = $(this);
-    if(!(e.relatedTarget==$this[0]||e.relatedTarget==$this.children('.video-play')[0])){
-        $this.children('.video-play').hide();
-    }
-    $this.css({'backgroundSize':'200px 200px','opacity':'1'});
-});
+// 防抖
+// function debounce(func, wait, immediate){  
+//     var timeout;  
+//     return function(){  
+//         var context = this,  
+//               args = arguments;  
+//         var later = function(){  
+//             timeout = null;  
+//             if(!immediate) func.apply(context, args);  
+//         };  
+//         var callNow = immediate && !timeout;  
+//         if(!timeout){  
+//         clearTimeout(timeout);  
+//         timeout = setTimeout(later, wait);  
+//     }  
+//         if(callNow) func.apply(context, args);  
+//     };  
+// }   
+// $('.video-item').mouseover(debounce(function(){
+//     var $this = $(this);
+//     $this.animate({'backgroundSize':'320px','opacity':'0.8',});
+// },300,true));
+// $('.video-item').mouseout(debounce(function(){
+//     var $this = $(this);
+//     $this.animate({'backgroundSize':'200px','opacity':'1'});
+// },300,true));
+// 弃用js,采用css实现hover
